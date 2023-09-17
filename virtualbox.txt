@@ -1,3 +1,4 @@
+#ubuntu 22.04 virtualbox7.0
 ##error 1
 Kernel driver not installed (rc=-1908)
 
