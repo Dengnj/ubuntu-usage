@@ -1,0 +1,26 @@
+
+以下命令适用于ubuntu20.04/22.04
+1、创建服务器器和SSH链接（我也没有用到）
+root@24.256.23.256
+Q.z4uklfsakf
+
+2、添加新的管理员用户(这很重要)
+sudo -i
+adduser rdpuser //rdpuser为用户名
+sdjfks!#@#  //密码
+
+sudo usermod -a -G rdpuser //为新用户赋权限
+3、安装Ubuntu图形用户界面
+sudo apt update
+sudo apt install ubuntu-desktop
+4、安装和配置rdp服务器
+sudo apt install xrdp
+sudo systemctl status xrdp
+sudo nano /etc/xrdp/xrdp.ini
+修改：
+port=tcp://:3389
+
+sudo systemctl restart xrdp
+
+5、在防火墙上打开rdp
+sudo ufw allow 3389
